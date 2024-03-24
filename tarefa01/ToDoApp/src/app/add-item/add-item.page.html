@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{pageTitle}}</ion-title>
+    <ion-button slot="end" ion-only (click)="close()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input id="title" type="text" placeholder="Task title" [(ngModel)]="item.title" />
+    </ion-item>
+
+    <ion-item>
+      <ion-input id="description" type="text" placeholder="Task description" [(ngModel)]="item.description"/>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button expand="full" color="secondary" (click)="saveItem(item)">Save</ion-button>
+
+</ion-content>
